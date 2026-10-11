@@ -4,19 +4,18 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<meta name="theme-color" content="#192A56">
-<meta name="description" content="Sudharsan Artifyfx - Digital Creator, Video Editor and Visual Artist.">
+<title>Sudharsan Artifyfx | Creative Universe</title>
 
-<title>SUDHARSAN | ARTIFYFX</title>
+<meta name="description"
+content="Welcome to Sudharsan Artifyfx. Explore premium photo edits, cinematic visuals, reels and creative projects.">
 
 <style>
 :root {
-    --navy: #192A56;
-    --champagne: #F7D794;
-    --rose: #EDA6A3;
-    --white: #FCFBFB;
-    --navy-light: #243968;
-    --muted: #D5D9E5;
+    --bg: #080808;
+    --card: #141414;
+    --red: #ff1744;
+    --white: #ffffff;
+    --gray: #a5a5a5;
 }
 
 * {
@@ -27,353 +26,351 @@
 }
 
 body {
-    background: var(--navy);
+    background: var(--bg);
     color: var(--white);
     font-family: Arial, sans-serif;
     overflow-x: hidden;
 }
 
-nav {
-    position: fixed;
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+header {
+    position: sticky;
     top: 0;
-    left: 0;
-    width: 100%;
-    padding: 22px 8%;
+    z-index: 100;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: rgba(25, 42, 86, 0.94);
-    backdrop-filter: blur(14px);
-    border-bottom: 1px solid rgba(247, 215, 148, 0.25);
-    z-index: 100;
+    padding: 20px 7%;
+    background: rgba(8, 8, 8, 0.94);
+    border-bottom: 1px solid #292929;
+    backdrop-filter: blur(12px);
 }
 
 .logo {
-    font-size: 18px;
-    font-weight: 900;
-    letter-spacing: 2px;
-    color: var(--white);
+    font-size: 19px;
+    font-weight: bold;
+    letter-spacing: 1px;
 }
 
 .logo span {
-    color: var(--champagne);
+    color: var(--red);
+}
+
+nav {
+    display: flex;
+    gap: 22px;
 }
 
 nav a {
-    color: var(--champagne);
-    text-decoration: none;
-    font-size: 12px;
-    letter-spacing: 2px;
+    color: #ddd;
+    font-size: 13px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: var(--red);
 }
 
 .hero {
-    min-height: 100vh;
+    min-height: 88vh;
+    padding: 100px 8%;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 120px 20px 70px;
-    background:
-        radial-gradient(
-            ellipse at 50% 35%,
-            #354A7C 0%,
-            #243968 30%,
-            #192A56 75%
-        );
+    align-items: flex-start;
+    position: relative;
+    overflow: hidden;
 }
 
-.badge {
-    color: var(--champagne);
-    border: 1px solid var(--champagne);
-    padding: 11px 20px;
+.hero::before {
+    content: "";
+    position: absolute;
+    width: 330px;
+    height: 330px;
+    background: var(--red);
+    filter: blur(180px);
+    opacity: 0.20;
+    right: -80px;
+    top: 100px;
+    pointer-events: none;
+}
+
+.tag {
+    color: var(--red);
+    border: 1px solid #49202a;
+    padding: 9px 15px;
     border-radius: 30px;
-    font-size: 11px;
-    letter-spacing: 3px;
-    margin-bottom: 30px;
-    animation: fadeIn 1s ease;
+    font-size: 12px;
+    letter-spacing: 2px;
+    margin-bottom: 25px;
 }
 
 .hero h1 {
-    font-size: clamp(38px, 9vw, 88px);
+    font-size: clamp(42px, 8vw, 88px);
+    line-height: 1.05;
+    max-width: 850px;
     font-weight: 900;
-    letter-spacing: -2px;
-    line-height: 1.12;
-    animation: fadeIn 1.2s ease;
 }
 
 .hero h1 span {
-    color: var(--champagne);
-    text-shadow: 0 0 35px rgba(247, 215, 148, 0.2);
-}
-
-.hero h2 {
-    margin-top: 22px;
-    color: var(--rose);
-    font-size: 13px;
-    letter-spacing: 5px;
+    color: var(--red);
+    text-shadow: 0 0 30px #ff174433;
 }
 
 .hero p {
-    max-width: 520px;
+    color: var(--gray);
+    max-width: 530px;
+    line-height: 1.8;
     margin-top: 24px;
-    color: var(--muted);
-    line-height: 1.9;
-    font-size: 14px;
 }
 
 .buttons {
     display: flex;
+    gap: 14px;
     flex-wrap: wrap;
-    justify-content: center;
-    gap: 15px;
-    margin-top: 35px;
+    margin-top: 30px;
 }
 
 .btn {
-    display: inline-block;
-    padding: 15px 23px;
+    padding: 14px 22px;
     border-radius: 6px;
-    text-decoration: none;
-    font-size: 12px;
+    font-size: 13px;
     font-weight: bold;
-    letter-spacing: 1px;
-    transition: 0.3s ease;
+    display: inline-block;
+    transition: 0.3s;
 }
 
-.primary {
-    background: var(--champagne);
-    color: var(--navy);
-    border: 1px solid var(--champagne);
+.btn-red {
+    background: var(--red);
+    color: white;
 }
 
-.secondary {
-    background: transparent;
-    color: var(--white);
-    border: 1px solid var(--rose);
+.btn-outline {
+    border: 1px solid #444;
 }
 
 .btn:hover {
     transform: translateY(-4px);
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
-}
-
-.primary:hover {
-    background: var(--rose);
-    border-color: var(--rose);
+    box-shadow: 0 8px 30px #ff174433;
 }
 
 section {
-    padding: 90px 8%;
+    padding: 85px 8%;
 }
 
-.section-title {
-    text-align: center;
-    font-size: 32px;
-    margin-bottom: 15px;
-    color: var(--white);
-}
-
-.section-title span {
-    color: var(--champagne);
-}
-
-.section-sub {
-    text-align: center;
-    color: var(--rose);
-    font-size: 11px;
-    letter-spacing: 2px;
-    margin-bottom: 42px;
-}
-
-.about-card {
-    max-width: 800px;
-    margin: auto;
-    padding: 38px;
-    background: linear-gradient(
-        135deg,
-        #243968,
-        #1B2D5A
-    );
-    border: 1px solid rgba(247, 215, 148, 0.3);
-    border-radius: 14px;
-    text-align: center;
-    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
-}
-
-.about-card h3 {
-    font-size: 24px;
-    margin-bottom: 20px;
-}
-
-.about-card h3 span {
-    color: var(--champagne);
-}
-
-.about-card p {
-    color: var(--muted);
-    font-size: 14px;
-    line-height: 2;
-}
-
-.about-card strong {
-    color: var(--rose);
-}
-
-.skills {
-    display: grid;
-    grid-template-columns: repeat(
-        auto-fit,
-        minmax(200px, 1fr)
-    );
-    gap: 20px;
-    max-width: 1100px;
-    margin: auto;
-}
-
-.skill {
-    padding: 30px 20px;
-    background: var(--navy-light);
-    border: 1px solid rgba(237, 166, 163, 0.25);
-    border-radius: 12px;
-    text-align: center;
-    transition: 0.3s ease;
-}
-
-.skill:hover {
-    transform: translateY(-6px);
-    border-color: var(--champagne);
-    background: #2A4074;
-}
-
-.icon {
-    font-size: 36px;
-    margin-bottom: 20px;
-}
-
-.skill h3 {
-    color: var(--champagne);
-    font-size: 17px;
+.section-label {
+    color: var(--red);
+    font-size: 12px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
     margin-bottom: 12px;
 }
 
-.skill p {
-    color: var(--muted);
-    font-size: 12px;
-    line-height: 1.8;
-}
-
-.project-box {
-    max-width: 800px;
-    margin: auto;
-    padding: 40px 25px;
-    text-align: center;
-    border: 1px solid rgba(247, 215, 148, 0.4);
-    border-radius: 14px;
-    background: linear-gradient(
-        135deg,
-        #2A4074,
-        #192A56
-    );
-}
-
-.project-box h3 {
-    color: var(--champagne);
-    font-size: 25px;
+.section-title {
+    font-size: clamp(30px, 5vw, 48px);
     margin-bottom: 18px;
 }
 
-.project-box p {
-    color: var(--muted);
-    font-size: 14px;
+.section-desc {
+    color: var(--gray);
+    line-height: 1.8;
+    max-width: 600px;
+    margin-bottom: 35px;
+}
+
+.about-box {
+    padding: 35px;
+    border: 1px solid #282828;
+    background: linear-gradient(135deg, #171717, #0b0b0b);
+    border-radius: 12px;
     line-height: 1.9;
+    color: #c7c7c7;
+}
+
+.about-box strong {
+    color: var(--red);
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.project {
+    background: var(--card);
+    border: 1px solid #292929;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: 0.35s;
+}
+
+.project:hover {
+    transform: translateY(-7px);
+    border-color: var(--red);
+    box-shadow: 0 12px 35px #ff174414;
+}
+
+.project img,
+.project video {
+    display: block;
+    width: 100%;
+    aspect-ratio: 4 / 5;
+    object-fit: cover;
+    background: #202020;
+}
+
+.project-info {
+    padding: 18px;
+}
+
+.project-info h3 {
+    font-size: 16px;
+    margin-bottom: 8px;
+}
+
+.project-info p {
+    color: var(--gray);
+    font-size: 12px;
+    line-height: 1.6;
+}
+
+.project-type {
+    display: inline-block;
+    color: var(--red);
+    font-size: 10px;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+
+.instagram-box {
+    padding: 45px 25px;
+    text-align: center;
+    border-radius: 14px;
+    border: 1px solid #3b1821;
+    background: radial-gradient(circle at top, #301019, #101010 65%);
+}
+
+.instagram-box h3 {
+    font-size: clamp(25px, 5vw, 40px);
+    margin-bottom: 15px;
+}
+
+.instagram-box p {
+    color: var(--gray);
+    line-height: 1.8;
     margin-bottom: 25px;
 }
 
-.contact {
+.contact-box {
     text-align: center;
-    background: linear-gradient(
-        180deg,
-        var(--navy),
-        #111D3D
-    );
+    padding: 45px 20px;
+    border: 1px solid #292929;
+    border-radius: 12px;
+    background: #111;
 }
 
-.contact p {
+.contact-box p {
+    color: var(--gray);
+    line-height: 1.8;
+    margin: 15px auto 25px;
     max-width: 500px;
-    margin: 20px auto 30px;
-    color: var(--muted);
-    font-size: 14px;
-    line-height: 1.9;
 }
 
 footer {
     padding: 28px 15px;
     text-align: center;
-    border-top: 1px solid rgba(247, 215, 148, 0.25);
-    color: var(--muted);
+    color: #888;
+    border-top: 1px solid #252525;
     font-size: 12px;
-    line-height: 2.1;
-    background: #152348;
+    line-height: 2;
 }
 
 footer span {
-    color: var(--champagne);
+    color: var(--red);
 }
 
-footer .tagline {
-    color: var(--rose);
-}
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
+@media (max-width: 760px) {
+    header {
+        padding: 17px 5%;
+        flex-wrap: wrap;
+        gap: 16px;
     }
 
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-@media (max-width: 480px) {
     nav {
-        padding: 20px 5%;
-    }
-
-    .logo {
-        font-size: 14px;
-        letter-spacing: 1px;
+        width: 100%;
+        justify-content: space-between;
+        gap: 10px;
+        overflow-x: auto;
     }
 
     nav a {
-        font-size: 10px;
+        white-space: nowrap;
+        font-size: 11px;
+    }
+
+    .hero {
+        min-height: 78vh;
+        padding: 85px 6%;
     }
 
     section {
-        padding: 75px 6%;
+        padding: 65px 6%;
     }
 
-    .about-card {
-        padding: 25px 18px;
+    .gallery {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
     }
 
-    .hero h2 {
+    .project-info {
+        padding: 12px;
+    }
+
+    .project-info h3 {
+        font-size: 13px;
+    }
+
+    .project-info p {
         font-size: 11px;
-        letter-spacing: 3px;
     }
 
-    .section-title {
-        font-size: 27px;
+    .about-box {
+        padding: 23px;
     }
+}
+
+@media (max-width: 390px) {
+    .gallery {
+        grid-template-columns: 1fr;
+    }
+}
+
+.reveal {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 @media (prefers-reduced-motion: reduce) {
     *, *::before, *::after {
         scroll-behavior: auto !important;
-        animation: none !important;
         transition: none !important;
+        animation: none !important;
+    }
+
+    .reveal {
+        opacity: 1;
+        transform: none;
     }
 }
 </style>
@@ -381,198 +378,228 @@ footer .tagline {
 
 <body>
 
-<nav>
-    <div class="logo">SUDHARSAN<span>.</span></div>
-    <a href="#home">HOME ↗</a>
-</nav>
+<header>
+    <a class="logo" href="#home">SUDHARSAN<span>.</span></a>
 
-<header class="hero" id="home">
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#work">My Work</a>
+        <a href="#instagram">Instagram</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
 
-    <div class="badge">
-        ✦ DIGITAL CREATOR ✦
-    </div>
+<main>
+
+<section class="hero" id="home">
+    <div class="tag">CREATOR • EDITOR • ARTIST</div>
 
     <h1>
-        SUDHARSAN<br>
-        <span>ARTIFYFX</span>
+        CREATING<br>
+        BEYOND<br>
+        <span>LIMITS.</span>
     </h1>
 
-    <h2>CREATE · EDIT · INSPIRE</h2>
-
     <p>
-        Turning imagination into visuals.
-        Every frame tells a story.
-        Every edit creates an emotion.
-        Welcome to my creative world.
+        Welcome to my creative universe.
+        A place where imagination meets editing,
+        ordinary frames become extraordinary,
+        and every creation tells a story.
     </p>
 
     <div class="buttons">
+        <a class="btn btn-red" href="#work">EXPLORE MY WORK ↗</a>
 
-        <a class="btn primary"
+        <a class="btn btn-outline"
            href="https://www.instagram.com/sudharsan_artifyfx/"
            target="_blank"
            rel="noopener noreferrer">
-            FOLLOW ON INSTAGRAM ↗
+            FOLLOW ON INSTAGRAM
         </a>
-
-        <a class="btn secondary" href="#about">
-            DISCOVER MY WORLD ↓
-        </a>
-
     </div>
-
-</header>
+</section>
 
 <section id="about">
+    <div class="section-label">01 / ABOUT ME</div>
 
-    <h2 class="section-title">
-        ABOUT <span>ME</span>
-    </h2>
+    <h2 class="section-title">Behind The Creativity.</h2>
 
-    <p class="section-sub">
-        THE PERSON BEHIND THE CREATIONS
-    </p>
+    <div class="about-box">
+        I'm <strong>Sudharsan</strong>, the creator behind
+        <strong>Sudharsan_Artifyfx</strong>.
 
-    <div class="about-card">
+        <br><br>
 
-        <h3>
-            Hi, I'm <span>Sudharsan!</span> 👋
-        </h3>
+        I explore creative editing, visual storytelling,
+        cinematic designs and digital art.
 
-        <p>
-            I'm a passionate digital creator who loves
-            transforming creative ideas into stunning visuals.
-            My world revolves around video editing, visual
-            effects, digital art and exploring new technologies.
+        My goal is simple: turn creative ideas into
+        visuals that people remember.
 
-            <br><br>
+        <br><br>
 
-            I believe creativity has no limits.
-            I don't just edit videos — I create experiences.
-
-            <br><br>
-
-            <strong>
-                Frame By Frame, I Create My Own World.
-            </strong>
-        </p>
-
+        <strong>My Vision:</strong> Create. Experiment. Inspire.
     </div>
-
 </section>
 
-<section id="skills">
+<section id="work">
+    <div class="section-label">02 / MY PORTFOLIO</div>
 
-    <h2 class="section-title">
-        MY <span>CREATIVE WORLD</span>
-    </h2>
+    <h2 class="section-title">Selected Creations.</h2>
 
-    <p class="section-sub">
-        WHAT I'M PASSIONATE ABOUT
+    <p class="section-desc">
+        A collection of my creative work.
+        Replace these sample cards with your own photos
+        and videos to build your personal portfolio.
     </p>
 
-    <div class="skills">
+    <div class="gallery">
 
-        <div class="skill">
-            <div class="icon">🎬</div>
-            <h3>Video Editing</h3>
-            <p>
-                Cinematic edits, reels and creative storytelling.
-            </p>
-        </div>
+        <!-- PROJECT 1: Replace sample1.jpg with your image URL -->
+        <article class="project reveal">
+            <img
+                src="https://placehold.co/600x750/171717/ff1744?text=YOUR+PHOTO+EDIT"
+                alt="Photo editing project">
 
-        <div class="skill">
-            <div class="icon">🎨</div>
-            <h3>Digital Art</h3>
-            <p>
-                Creative designs and visually stunning concepts.
-            </p>
-        </div>
+            <div class="project-info">
+                <span class="project-type">PHOTO EDITING</span>
+                <h3>Your Creative Edit</h3>
+                <p>Showcase your best photo manipulation.</p>
+            </div>
+        </article>
 
-        <div class="skill">
-            <div class="icon">✨</div>
-            <h3>Visual Effects</h3>
-            <p>
-                Creative effects and immersive visual experiences.
-            </p>
-        </div>
+        <!-- PROJECT 2 -->
+        <article class="project reveal">
+            <img
+                src="https://placehold.co/600x750/171717/ff1744?text=CINEMATIC+ART"
+                alt="Cinematic artwork">
 
-        <div class="skill">
-            <div class="icon">💻</div>
-            <h3>Technology</h3>
-            <p>
-                Exploring coding, innovation and new digital tools.
-            </p>
-        </div>
+            <div class="project-info">
+                <span class="project-type">CINEMATIC</span>
+                <h3>Cinematic Universe</h3>
+                <p>Bring your cinematic concepts to life.</p>
+            </div>
+        </article>
+
+        <!-- PROJECT 3 -->
+        <article class="project reveal">
+            <img
+                src="https://placehold.co/600x750/171717/ff1744?text=DIGITAL+DESIGN"
+                alt="Digital design">
+
+            <div class="project-info">
+                <span class="project-type">DIGITAL ART</span>
+                <h3>Digital Creations</h3>
+                <p>Explore original designs and creative ideas.</p>
+            </div>
+        </article>
+
+        <!-- PROJECT 4: Video example -->
+        <article class="project reveal">
+            <video controls playsinline preload="metadata"
+                   poster="https://placehold.co/600x750/171717/ff1744?text=YOUR+REEL">
+                <!-- Add your own video URL below -->
+                <!-- <source src="videos/my-reel.mp4" type="video/mp4"> -->
+            </video>
+
+            <div class="project-info">
+                <span class="project-type">VIDEO EDITING</span>
+                <h3>Your Reel</h3>
+                <p>Add your own video file or video URL.</p>
+            </div>
+        </article>
+
+        <!-- PROJECT 5 -->
+        <article class="project reveal">
+            <img
+                src="https://placehold.co/600x750/171717/ff1744?text=POSTER+DESIGN"
+                alt="Poster design">
+
+            <div class="project-info">
+                <span class="project-type">POSTER DESIGN</span>
+                <h3>Poster Universe</h3>
+                <p>Display your signature poster designs.</p>
+            </div>
+        </article>
+
+        <!-- PROJECT 6 -->
+        <article class="project reveal">
+            <img
+                src="https://placehold.co/600x750/171717/ff1744?text=MORE+CREATIONS"
+                alt="More creative projects">
+
+            <div class="project-info">
+                <span class="project-type">EXPERIMENTAL</span>
+                <h3>More Creations</h3>
+                <p>Your creativity has no limits.</p>
+            </div>
+        </article>
 
     </div>
-
 </section>
 
-<section id="projects">
+<section id="instagram">
+    <div class="instagram-box reveal">
+        <div class="section-label">03 / SOCIAL MEDIA</div>
 
-    <h2 class="section-title">
-        MY <span>PROJECTS</span>
-    </h2>
-
-    <p class="section-sub">
-        CREATIVITY IN EVERY FRAME
-    </p>
-
-    <div class="project-box">
-
-        <h3>My Creative Portfolio</h3>
+        <h3>Let's Connect On Instagram.</h3>
 
         <p>
-            Discover my creative journey, editing style and
-            digital creations on Instagram.
-            More creative projects coming soon!
+            Discover my latest edits, creative experiments,
+            reels and behind-the-scenes content.
         </p>
 
-        <a class="btn primary"
+        <a class="btn btn-red"
            href="https://www.instagram.com/sudharsan_artifyfx/"
            target="_blank"
            rel="noopener noreferrer">
-            EXPLORE MY WORK ↗
+            @SUDHARSAN_ARTIFYFX ↗
         </a>
-
     </div>
-
 </section>
 
-<section class="contact" id="contact">
+<section id="contact">
+    <div class="section-label">04 / COLLABORATIONS</div>
 
-    <h2 class="section-title">
-        LET'S <span>CONNECT</span>
-    </h2>
+    <div class="contact-box reveal">
+        <h2 class="section-title">Have A Creative Idea?</h2>
 
-    <p>
-        Have a creative idea? Let's connect and make
-        something amazing together.
-    </p>
+        <p>
+            Interested in collaborations, editing projects
+            or creative work? Connect with me on Instagram.
+        </p>
 
-    <a class="btn primary"
-       href="https://www.instagram.com/sudharsan_artifyfx/"
-       target="_blank"
-       rel="noopener noreferrer">
-        SAY HELLO ON INSTAGRAM ↗
-    </a>
-
+        <a class="btn btn-red"
+           href="https://www.instagram.com/sudharsan_artifyfx/"
+           target="_blank"
+           rel="noopener noreferrer">
+            LET'S WORK TOGETHER ↗
+        </a>
+    </div>
 </section>
+
+</main>
 
 <footer>
-
-    <p>
-        © 2026 <span>SUDHARSAN_ARTIFYFX</span>
-    </p>
-
-    <p>Designed with ❤️ & Creativity</p>
-
-    <p class="tagline">
-        FRAME BY FRAME · CREATE YOUR WORLD
-    </p>
-
+    <p>© 2026 <span>Sudharsan Artifyfx</span>. All Rights Reserved.</p>
+    <p>Designed with creativity & passion.</p>
 </footer>
+
+<script>
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+            observer.unobserve(entry.target);
+        }
+    });
+}, { threshold: 0.12 });
+
+document.querySelectorAll(".reveal").forEach(element => {
+    observer.observe(element);
+});
+</script>
 
 </body>
 </html>
