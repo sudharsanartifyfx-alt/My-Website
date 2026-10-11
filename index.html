@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="theme-color" content="#192A56">
+<meta name="description" content="Sudharsan Artifyfx - Digital Creator, Video Editor and Visual Artist.">
+
+<title>SUDHARSAN | ARTIFYFX</title>
+
+<style>
+:root {
+    --navy: #192A56;
+    --champagne: #F7D794;
+    --rose: #EDA6A3;
+    --white: #FCFBFB;
+    --navy-light: #243968;
+    --muted: #D5D9E5;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    background: var(--navy);
+    color: var(--white);
+    font-family: Arial, sans-serif;
+    overflow-x: hidden;
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 22px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(25, 42, 86, 0.94);
+    backdrop-filter: blur(14px);
+    border-bottom: 1px solid rgba(247, 215, 148, 0.25);
+    z-index: 100;
+}
+
+.logo {
+    font-size: 18px;
+    font-weight: 900;
+    letter-spacing: 2px;
+    color: var(--white);
+}
+
+.logo span {
+    color: var(--champagne);
+}
+
+nav a {
+    color: var(--champagne);
+    text-decoration: none;
+    font-size: 12px;
+    letter-spacing: 2px;
+}
+
+.hero {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 120px 20px 70px;
+    background:
+        radial-gradient(
+            ellipse at 50% 35%,
+            #354A7C 0%,
+            #243968 30%,
+            #192A56 75%
+        );
+}
+
+.badge {
+    color: var(--champagne);
+    border: 1px solid var(--champagne);
+    padding: 11px 20px;
+    border-radius: 30px;
+    font-size: 11px;
+    letter-spacing: 3px;
+    margin-bottom: 30px;
+    animation: fadeIn 1s ease;
+}
+
+.hero h1 {
+    font-size: clamp(38px, 9vw, 88px);
+    font-weight: 900;
+    letter-spacing: -2px;
+    line-height: 1.12;
+    animation: fadeIn 1.2s ease;
+}
+
+.hero h1 span {
+    color: var(--champagne);
+    text-shadow: 0 0 35px rgba(247, 215, 148, 0.2);
+}
+
+.hero h2 {
+    margin-top: 22px;
+    color: var(--rose);
+    font-size: 13px;
+    letter-spacing: 5px;
+}
+
+.hero p {
+    max-width: 520px;
+    margin-top: 24px;
+    color: var(--muted);
+    line-height: 1.9;
+    font-size: 14px;
+}
+
+.buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 35px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 15px 23px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    transition: 0.3s ease;
+}
+
+.primary {
+    background: var(--champagne);
+    color: var(--navy);
+    border: 1px solid var(--champagne);
+}
+
+.secondary {
+    background: transparent;
+    color: var(--white);
+    border: 1px solid var(--rose);
+}
+
+.btn:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+.primary:hover {
+    background: var(--rose);
+    border-color: var(--rose);
+}
+
+section {
+    padding: 90px 8%;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 15px;
+    color: var(--white);
+}
+
+.section-title span {
+    color: var(--champagne);
+}
+
+.section-sub {
+    text-align: center;
+    color: var(--rose);
+    font-size: 11px;
+    letter-spacing: 2px;
+    margin-bottom: 42px;
+}
+
+.about-card {
+    max-width: 800px;
+    margin: auto;
+    padding: 38px;
+    background: linear-gradient(
+        135deg,
+        #243968,
+        #1B2D5A
+    );
+    border: 1px solid rgba(247, 215, 148, 0.3);
+    border-radius: 14px;
+    text-align: center;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+}
+
+.about-card h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.about-card h3 span {
+    color: var(--champagne);
+}
+
+.about-card p {
+    color: var(--muted);
+    font-size: 14px;
+    line-height: 2;
+}
+
+.about-card strong {
+    color: var(--rose);
+}
+
+.skills {
+    display: grid;
+    grid-template-columns: repeat(
+        auto-fit,
+        minmax(200px, 1fr)
+    );
+    gap: 20px;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.skill {
+    padding: 30px 20px;
+    background: var(--navy-light);
+    border: 1px solid rgba(237, 166, 163, 0.25);
+    border-radius: 12px;
+    text-align: center;
+    transition: 0.3s ease;
+}
+
+.skill:hover {
+    transform: translateY(-6px);
+    border-color: var(--champagne);
+    background: #2A4074;
+}
+
+.icon {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.skill h3 {
+    color: var(--champagne);
+    font-size: 17px;
+    margin-bottom: 12px;
+}
+
+.skill p {
+    color: var(--muted);
+    font-size: 12px;
+    line-height: 1.8;
+}
+
+.project-box {
+    max-width: 800px;
+    margin: auto;
+    padding: 40px 25px;
+    text-align: center;
+    border: 1px solid rgba(247, 215, 148, 0.4);
+    border-radius: 14px;
+    background: linear-gradient(
+        135deg,
+        #2A4074,
+        #192A56
+    );
+}
+
+.project-box h3 {
+    color: var(--champagne);
+    font-size: 25px;
+    margin-bottom: 18px;
+}
+
+.project-box p {
+    color: var(--muted);
+    font-size: 14px;
+    line-height: 1.9;
+    margin-bottom: 25px;
+}
+
+.contact {
+    text-align: center;
+    background: linear-gradient(
+        180deg,
+        var(--navy),
+        #111D3D
+    );
+}
+
+.contact p {
+    max-width: 500px;
+    margin: 20px auto 30px;
+    color: var(--muted);
+    font-size: 14px;
+    line-height: 1.9;
+}
+
+footer {
+    padding: 28px 15px;
+    text-align: center;
+    border-top: 1px solid rgba(247, 215, 148, 0.25);
+    color: var(--muted);
+    font-size: 12px;
+    line-height: 2.1;
+    background: #152348;
+}
+
+footer span {
+    color: var(--champagne);
+}
+
+footer .tagline {
+    color: var(--rose);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 480px) {
+    nav {
+        padding: 20px 5%;
+    }
+
+    .logo {
+        font-size: 14px;
+        letter-spacing: 1px;
+    }
+
+    nav a {
+        font-size: 10px;
+    }
+
+    section {
+        padding: 75px 6%;
+    }
+
+    .about-card {
+        padding: 25px 18px;
+    }
+
+    .hero h2 {
+        font-size: 11px;
+        letter-spacing: 3px;
+    }
+
+    .section-title {
+        font-size: 27px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        scroll-behavior: auto !important;
+        animation: none !important;
+        transition: none !important;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+    <div class="logo">SUDHARSAN<span>.</span></div>
+    <a href="#home">HOME ↗</a>
+</nav>
+
+<header class="hero" id="home">
+
+    <div class="badge">
+        ✦ DIGITAL CREATOR ✦
+    </div>
+
+    <h1>
+        SUDHARSAN<br>
+        <span>ARTIFYFX</span>
+    </h1>
+
+    <h2>CREATE · EDIT · INSPIRE</h2>
+
+    <p>
+        Turning imagination into visuals.
+        Every frame tells a story.
+        Every edit creates an emotion.
+        Welcome to my creative world.
+    </p>
+
+    <div class="buttons">
+
+        <a class="btn primary"
+           href="https://www.instagram.com/sudharsan_artifyfx/"
+           target="_blank"
+           rel="noopener noreferrer">
+            FOLLOW ON INSTAGRAM ↗
+        </a>
+
+        <a class="btn secondary" href="#about">
+            DISCOVER MY WORLD ↓
+        </a>
+
+    </div>
+
+</header>
+
+<section id="about">
+
+    <h2 class="section-title">
+        ABOUT <span>ME</span>
+    </h2>
+
+    <p class="section-sub">
+        THE PERSON BEHIND THE CREATIONS
+    </p>
+
+    <div class="about-card">
+
+        <h3>
+            Hi, I'm <span>Sudharsan!</span> 👋
+        </h3>
+
+        <p>
+            I'm a passionate digital creator who loves
+            transforming creative ideas into stunning visuals.
+            My world revolves around video editing, visual
+            effects, digital art and exploring new technologies.
+
+            <br><br>
+
+            I believe creativity has no limits.
+            I don't just edit videos — I create experiences.
+
+            <br><br>
+
+            <strong>
+                Frame By Frame, I Create My Own World.
+            </strong>
+        </p>
+
+    </div>
+
+</section>
+
+<section id="skills">
+
+    <h2 class="section-title">
+        MY <span>CREATIVE WORLD</span>
+    </h2>
+
+    <p class="section-sub">
+        WHAT I'M PASSIONATE ABOUT
+    </p>
+
+    <div class="skills">
+
+        <div class="skill">
+            <div class="icon">🎬</div>
+            <h3>Video Editing</h3>
+            <p>
+                Cinematic edits, reels and creative storytelling.
+            </p>
+        </div>
+
+        <div class="skill">
+            <div class="icon">🎨</div>
+            <h3>Digital Art</h3>
+            <p>
+                Creative designs and visually stunning concepts.
+            </p>
+        </div>
+
+        <div class="skill">
+            <div class="icon">✨</div>
+            <h3>Visual Effects</h3>
+            <p>
+                Creative effects and immersive visual experiences.
+            </p>
+        </div>
+
+        <div class="skill">
+            <div class="icon">💻</div>
+            <h3>Technology</h3>
+            <p>
+                Exploring coding, innovation and new digital tools.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+<section id="projects">
+
+    <h2 class="section-title">
+        MY <span>PROJECTS</span>
+    </h2>
+
+    <p class="section-sub">
+        CREATIVITY IN EVERY FRAME
+    </p>
+
+    <div class="project-box">
+
+        <h3>My Creative Portfolio</h3>
+
+        <p>
+            Discover my creative journey, editing style and
+            digital creations on Instagram.
+            More creative projects coming soon!
+        </p>
+
+        <a class="btn primary"
+           href="https://www.instagram.com/sudharsan_artifyfx/"
+           target="_blank"
+           rel="noopener noreferrer">
+            EXPLORE MY WORK ↗
+        </a>
+
+    </div>
+
+</section>
+
+<section class="contact" id="contact">
+
+    <h2 class="section-title">
+        LET'S <span>CONNECT</span>
+    </h2>
+
+    <p>
+        Have a creative idea? Let's connect and make
+        something amazing together.
+    </p>
+
+    <a class="btn primary"
+       href="https://www.instagram.com/sudharsan_artifyfx/"
+       target="_blank"
+       rel="noopener noreferrer">
+        SAY HELLO ON INSTAGRAM ↗
+    </a>
+
+</section>
+
+<footer>
+
+    <p>
+        © 2026 <span>SUDHARSAN_ARTIFYFX</span>
+    </p>
+
+    <p>Designed with ❤️ & Creativity</p>
+
+    <p class="tagline">
+        FRAME BY FRAME · CREATE YOUR WORLD
+    </p>
+
+</footer>
+
+</body>
+</html>
